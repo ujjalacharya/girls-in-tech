@@ -19,3 +19,6 @@ exports.getProfile = (req, res) => {
 exports.getAbout = (req, res) => {
  res.render('about', {title: 'about'});
 }
+exports.getSignup = (req, res) => {
+    res.render('signup');
+}
