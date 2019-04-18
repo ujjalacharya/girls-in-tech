@@ -1,3 +1,16 @@
+.navbar{
+  height: 7%;
+}
+
+.main-topic{
+  color: #ffff;
+  width: 75%;
+}
+
+.hero{
+  height: 28vh;
+}
+
 .hero img {
   width: 100% !important;
   position: absolute;
@@ -26,4 +39,19 @@
 
 .buttons{
   height: 45px;
+}
+
+.fa-bars{
+  color: #ffff;
+}
+
+/* Program */
+
+.program{
+  background-color: #fdcb6e;
+  height: 14vh;
+  padding-top: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
 }
