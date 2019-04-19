@@ -44,3 +44,7 @@ exports.getBlogs = (req, res) => {
 exports.getAbout = (req, res) => {
  res.render('about', {title: 'about'});
 }
+
+exports.getRoadmap = (req, res) => {
+ res.render('roadmap', {title: 'roadmap'});
+}

@@ -1,0 +1,35 @@
+<% include partials/header%>
+      <div class="container-fluid" style="background-color: #F0F9FB; height: 100vh">
+      <div class="row">      
+        <h2 class="mt-3 future">Imagine your future</h2>
+
+        <p class="wanna-learn mt-3">What do you want to learn ?</p>
+      </div>
+      <div id="roadmap-img">
+        <img src="/images/roadmap.jpg" style="margin-left: -46px;" alt="">
+      </div>
+      </div>
+
+  <script>
+    let i = 1;
+   const ri = document.getElementById("roadmap-img");
+      ri.addEventListener("click", function(){
+        
+    if (i === 1){
+      ri.firstChild.nextSibling.src = "/images/roadmap2.jpg";
+      document.querySelector(".row").style.display = "none"
+      i+=1;
+    console.log(i)
+    }
+    
+    if(i === 2){
+      ri.addEventListener("click", function(){
+      window.location.href = "/course"
+    })
+    }
+    })
+
+
+
+  </script>
+<% include partials/footer%>

@@ -60,7 +60,33 @@
 
 .mentorship{
   background-color: #F4F4E6;
-  height: 40vh;
+  height: 50vh;
+}
+
+.mentorship h4{
+  font-size: 40px;
+  color: #000;
+  font-weight: bold;
+}
+
+.cover img{
+  height: 250px;
+}
+
+.cover p{
+  color: #000;
+}
+
+/* Roadmap */
+.future{
+  width: 100%;
+  margin-left: 45px;
+  color: #02b3e4;
+}
+
+.wanna-learn{
+  margin-left: 80px;
+  font-weight: bold;
 }
 
 /* profile */

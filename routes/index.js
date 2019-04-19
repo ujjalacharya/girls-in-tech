@@ -12,5 +12,6 @@ router.get('/events', indexController.getEvents);
 router.get('/blogs', indexController.getBlogs);
 router.post('/helpline',indexController.postHelpline);
 router.get('/about', indexController.getAbout);
+router.get('/roadmap', indexController.getRoadmap);
 
 module.exports = router;
