@@ -3,6 +3,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var firebase = require("firebase/app");
+require("firebase/auth");
+require("firebase/database");
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBNLCx5Yiy4-RgGJ_5vk8HetM9cyZoGe5U",
+  authDomain: "girls-in-tech-29e3b.firebaseapp.com",
+  databaseURL: "https://girls-in-tech-29e3b.firebaseio.com",
+  projectId: "girls-in-tech-29e3b",
+  storageBucket: "girls-in-tech-29e3b.appspot.com",
+  messagingSenderId: "470097188027"
+};
+firebase.initializeApp(config);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
