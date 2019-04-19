@@ -77,6 +77,18 @@
   color: #000;
 }
 
+/* Roadmap */
+.future{
+  width: 100%;
+  margin-left: 45px;
+  color: #02b3e4;
+}
+
+.wanna-learn{
+  margin-left: 80px;
+  font-weight: bold;
+}
+
 /* profile */
 .emp-profile{
     padding: 3%;

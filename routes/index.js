@@ -10,7 +10,7 @@ router.get('/dashboard',indexController.getDashboard);
 router.get('/helpline', indexController.getHelpline);
 router.get('/events', indexController.getEvents);
 router.get('/blogs', indexController.getBlogs);
-
 router.get('/about', indexController.getAbout);
+router.get('/roadmap', indexController.getRoadmap);
 
 module.exports = router;
