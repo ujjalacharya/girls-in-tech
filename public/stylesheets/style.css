@@ -60,7 +60,21 @@
 
 .mentorship{
   background-color: #F4F4E6;
-  height: 40vh;
+  height: 50vh;
+}
+
+.mentorship h4{
+  font-size: 40px;
+  color: #000;
+  font-weight: bold;
+}
+
+.cover img{
+  height: 250px;
+}
+
+.cover p{
+  color: #000;
 }
 
 /* profile */
