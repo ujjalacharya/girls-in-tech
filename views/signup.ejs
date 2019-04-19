@@ -1,5 +1,246 @@
 <% include partials/header%>
-<div class="container-fluid">
-   
+<div class="container">
+<div class="container mt-2 mb-4">
+    <div class="col-sm-8 ml-auto mr-auto">
+        <ul class="nav nav-pills nav-fill mb-1" id="pills-tab" role="tablist">
+            <li class="nav-item"> <a class="nav-link active" id="pills-signin-tab" data-toggle="pill"
+                    href="#pills-signin" role="tab" aria-controls="pills-signin" aria-selected="true">Student</a> </li>
+            <li class="nav-item"> <a class="nav-link" id="pills-signup-tab" data-toggle="pill" href="#pills-signup"
+                    role="tab" aria-controls="pills-signup" aria-selected="false">Employer</a> </li>
+        </ul>
+        <!-- <div class="text-info text-center"><h4>Personal Details</h4></div> -->
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-signin" role="tabpanel" aria-labelledby="pills-signin-tab">
+                <div class="col-sm-12 border border-primary shadow rounded pt-2">
+                    <form method="post" id="singninFrom" action="/users/signup">
+                        <div class="text-info text-center">
+                            <h4>Personal Details</h4>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Name <span class="text-danger">*</span></label>
+                            <input type="text" name="name" id="email" class="form-control" placeholder="Enter valid name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="Enter valid email" required>
+                        </div>
+                                                    <div class="well">
+                                <div class="form-group">
+                                    <label>Date of Birth</label>
+                                    <input type="date" name="dob" class="form-control" id="exampleInputDOB1" placeholder="Date of Birth">
+                                </div>
+                            </div>
+                            
+                            <div class="well">
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">Contact Number <span class="text-danger">*</span></label>
+                                <input type="number" name="contact" id="email" class="form-control" placeholder="Enter valid number" required>
+                            </div>
+                            <div class="form-group dropdown">
+                                <button type="button" name="course" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Select Course
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
+                            </div>
+                            <div class="form-group dropdown">
+                                <button type="button" name="gender" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Gender
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Male</a>
+                                    <a class="dropdown-item" href="#">Female</a>
+                                    <a class="dropdown-item" href="#">Other</a>
+                                </div>
+                            </div>
+                            <div class="form-group dropdown">
+                                <button type="button" name="city" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Current City
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Kathmandu</a>
+                                    <a class="dropdown-item" href="#">Pokhara</a>
+                                    <a class="dropdown-item" href="#">Dhangadhi</a>
+                                </div>
+                            </div>
+
+                        
+                        <div class="form-group">
+                            <label class="font-weight-bold">Password <span class="text-danger">*</span></label>
+                            <input type="password" name="password" id="password" class="form-control"
+                                placeholder="***********" required>
+                        </div>
+                        <div class="text-info text-center">
+                            <h4>Educational Details</h4>
+                        </div>
+                        <div class="text-success text-center">
+                            <h5>High School(10th)</h5>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group dropdown">
+                                <button type="button" name="hspy" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Passed Year
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">2000</a>
+                                    <a class="dropdown-item" href="#">2001</a>
+                                    <a class="dropdown-item" href="#">2002</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="hsp" class="form-control" id="email" placeholder="Marks Obtained(%)">
+                            </div>  
+                        </div>
+                        <div class="text-success text-center">
+                            <h5>Senior Secondary School(12th)</h5>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group dropdown">
+                                <button type="button" name="ssspy" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Passed Year
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">2000</a>
+                                    <a class="dropdown-item" href="#">2001</a>
+                                    <a class="dropdown-item" href="#">2002</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="sssp" class="form-control" id="email" placeholder="Marks Obtained(%)">
+                            </div>
+                        </div>
+                        <div class="text-success text-center">
+                            <h5>College/Campus Details</h5>
+                        </div>
+                        <div class="form-group dropdown">
+                            <button type="button" name="Degree" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Degree
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">B.IT</a>
+                                <a class="dropdown-item" href="#">B.Sc.CSIT</a>
+                                <a class="dropdown-item" href="#">B.CA</a>
+                            </div>
+                            <button type="button" name="Subject" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Subject
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Computer Science</a>
+                                <a class="dropdown-item" href="#">Management</a>
+                                <a class="dropdown-item" href="#">Arts</a>
+                            </div>
+                        </div>
+                        <div class="form-group dropdown">
+                            <button type="button" name="cjy" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Joining Year
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">2000</a>
+                                <a class="dropdown-item" href="#">2001</a>
+                                <a class="dropdown-item" href="#">2002</a>
+                            </div>
+                            <button type="button" name="cjy" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Year of Completion
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">2000</a>
+                                <a class="dropdown-item" href="#">2001</a>
+                                <a class="dropdown-item" href="#">2002</a>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="collegep" class="form-control" id="email" placeholder="Marks Obtained(%)/GPA">
+                                <input type="text" name="collegen" class="form-control" id="email" placeholder="College/Campus Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" value="Sign Up" class="btn btn-block btn-primary">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-signup" role="tabpanel" aria-labelledby="pills-signup-tab">
+                <div class="col-sm-12 border border-primary shadow rounded pt-2">
+                    <div class="text-center"><img src="" class="rounded-circle border p-1">
+                    </div>
+                    <form method="post" id="singnupFrom">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
+                            <input type="email" name="signupemail" id="signupemail" class="form-control"
+                                placeholder="Enter valid email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">User Name <span class="text-danger">*</span></label>
+                            <input type="text" name="signupusername" id="signupusername" class="form-control"
+                                placeholder="Choose your user name" required>
+                            <div class="text-danger"><em>This will be your login name!</em></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Phone #</label>
+                            <input type="text" name="signupphone" id="signupphone" class="form-control"
+                                placeholder="(000)-(0000000)">
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Password <span class="text-danger">*</span></label>
+                            <input type="password" name="signuppassword" id="signuppassword" class="form-control"
+                                placeholder="***********" pattern="^\S{6,}$"
+                                onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Confirm Password <span class="text-danger">*</span></label>
+                            <input type="password" name="signupcpassword" id="signupcpassword" class="form-control"
+                                pattern="^\S{6,}$"
+                                onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');"
+                                placeholder="***********" required>
+                        </div>
+                        <div class="form-group">
+                            <label><input type="checkbox" name="signupcondition" id="signupcondition" required> I agree
+                                with the <a href="javascript:;">Terms &amp; Conditions</a> for Registration.</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="submit" name="signupsubmit" value="Sign Up" class="btn btn-block btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="forgotPass" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form method="post" id="forgotpassForm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Forgot Password</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                                aria-hidden="true">&times;</span> </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Email <span class="text-danger">*</span></label>
+                            <input type="email" name="forgotemail" id="forgotemail" class="form-control"
+                                placeholder="Enter your valid email..." required>
+                        </div>
+                        <div class="form-group">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sign In</button>
+                        <button type="submit" name="forgotPass" class="btn btn-primary"><i class="fa fa-envelope"></i>
+                            Send Request</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </div>
 <% include partials/footer%>

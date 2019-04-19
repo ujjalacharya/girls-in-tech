@@ -13,12 +13,7 @@ exports.getEvents = (req, res) => {
 exports.getBlogs = (req, res) => {
  res.render('blogs', {title: 'blogs'});
 }
-exports.getProfile = (req, res) => {
- res.render('profile', {title: 'profile'});
-}
+
 exports.getAbout = (req, res) => {
  res.render('about', {title: 'about'});
-}
-exports.getSignup = (req, res) => {
-    res.render('signup');
 }
