@@ -60,7 +60,7 @@
 
 .mentorship{
   background-color: #F4F4E6;
-  height: 50vh;
+  height: 60vh;
 }
 
 .mentorship h4{
@@ -76,6 +76,20 @@
 .cover p{
   color: #000;
 }
+
+/* Bootcamps */
+
+.bootcamp{
+  background-color: #EEF2F6;
+  height: 60vh;
+}
+
+.bootcamp h4{
+  font-size: 40px;
+  color: #000;
+  font-weight: bold;
+}
+
 
 /* Roadmap */
 .future{
