@@ -13,7 +13,7 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link href="/vendor/bootstrap/css/bootstrap1.min.css" rel="stylesheet">
+  <!-- <link href="/vendor/bootstrap/css/bootstrap1.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -28,7 +28,7 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-dark border-right" id="sidebar-wrapper">
+    <!-- <div class="bg-dark border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Topic </div>
       <div class="list-group list-group-flush">
         <a href="/" class="list-group-item list-group-item-action bg-dark">Home</a>
@@ -40,15 +40,42 @@
         <a href="/about" class="list-group-item list-group-item-action bg-dark">About</a>
         <a href="/roadmap" class="list-group-item list-group-item-action bg-dark">Roadmap</a>
       </div>
-    </div>
+    </div> -->
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"
-        style="position: fixed; z-index: 9999;width:100%;">
-        <div id="menu-toggle" style="cursor: pointer;font-size: 236%;">
+      <nav class="" style="position: fixed; z-index: 9999;width:100%;">
+        <div class="menu-container">
+          <div class="menu-bar-container ">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="title">
+            <%- title -%>
+          </div>
+        </div>
+
+
+
+        <div class="menu-content">
+          <ul>
+
+            <li class=<%if (title=='home') {%> "active" <%}%>> <a href="/">Home</a></li>
+            <li class = <%if (title=='dashboard') {%> "active" <%}%>> <a href="/dashboard">Dashboard</a></li>
+            <li class = <%if (title=='helpline') {%> "active" <%}%>> <a href="/helpline">Helpline</a></li>
+            <li class = <%if (title=='blogs') {%> "active" <%}%>> <a href="/blogs">Blogs</a></li>
+            <li class = <%if (title=='events') {%> "active" <%}%>> <a href="/events">Events</a></li>
+            <li class = <%if (title=='profile') {%> "active" <%}%>> <a href="/users/profile">Profile </a></li>
+            <li class = <%if (title=='about') {%> "active" <%}%>> <a href="/about">About</a></li>
+            <li class = <%if (title=='roadmap') {%> "active" <%}%>> <a href="/roadmap">Roadmap</a></li>
+
+          </ul>
+        </div>
+        <!-- <div id="menu-toggle" style="cursor: pointer;font-size: 236%;">
           <i class="fas fa-bars"></i>
         </div>
 
@@ -78,5 +105,5 @@
               </div>
             </li>
           </ul>
-        </div>
+        </div> -->
       </nav>

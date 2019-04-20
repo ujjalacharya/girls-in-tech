@@ -10,17 +10,17 @@ exports.postSignup = (req, res) => {
             email: email
         });
     }
-    writeUserData(req.body.name,req.body.email)
+    writeUserData(req.body.name, req.body.email)
     res.redirect('/users/profile');
 }
 exports.profile = (req, res) => {
     let users = firebase.database().ref('/users/');
-    users.on('value',function (user) {
+    users.on('value', function (user) {
         console.log(user.val());
     })
     // .then(user => {
     //     console.log(user);
     //     users.off('value')
     // }).catch(e=>console.log(e))
-    res.render('profile');
+    res.render('profile', { title: 'profile' });
 }

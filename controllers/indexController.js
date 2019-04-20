@@ -5,7 +5,7 @@ const { mockData, courseData} = require('./mock/mockdata');
 const eventData = require("./mock/eventMockData");
 
 exports.getIndex = (req, res) => {
-    res.render('index');
+    res.render('index', { title: 'home' });
 }
 exports.getDashboard = (req, res) => {
     res.render('dashboard', { title: 'dashboard', mockData });
@@ -63,5 +63,6 @@ exports.handleSearch = (req, res) => {
 }
 
 exports.getCourse = (req, res) => {
+
  res.render('course', {courseData});
 }

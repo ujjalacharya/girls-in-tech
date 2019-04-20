@@ -1,182 +1,183 @@
 <% include partials/header%>
-      <div class="container-fluid">
-        <div class="container emp-profile">
-          <form method="post">
+<div class="container-fluid margin-header">
+  <div class="container emp-profile">
+    <form method="post">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-img">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
+              alt="" />
+            <div class="file btn btn-lg btn-primary">
+              Change Photo
+              <input type="file" name="file" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="profile-head">
+            <h5>
+              Kshiti Ghelani
+            </h5>
+            <h6>
+              Web Developer and Designer
+            </h6>
+            </br>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link btn-primary" style="margin-right: 5px" id="home-tab" data-toggle="tab" href="#home"
+                  role="tab" aria-controls="home" aria-selected="false">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn-primary" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                  aria-controls="profile" aria-selected="false">Educational Details</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-work">
+            <p class="text-info">WORK LINK</p>
+            <a href="https://github.com/ujjalacharya/girls-in-tech">girls-in-tech</a><br />
+            <a href="https://chatwithaanand.herokuapp.com/">Chat App</a><br />
+            <a href="https://game-shop.netlify.com/">Games Shop</a>
+            <p class="text-info">SKILLS</p>
+            <a>Web Designer</a><br />
+            <a>Web Developer</a><br />
+            <a>WordPress</a><br />
+            <a>WooCommerce</a><br />
+            <a>PHP, .Net,Nodejs</a><br />
+            <p class="text-info">INTEREST</p>
+            <a>Data Science</a><br />
+            <a>Web Developer</a><br />
+            <a>Music</a><br />
+            <a>Art</a><br />
+            <a>Mobile App Developement</a><br />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="tab-content profile-tab" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>User Id</label>
+                </div>
+                <div class="col-md-6">
+                  <p>Kshiti123</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Name</label>
+                </div>
+                <div class="col-md-6">
+                  <p>Kshiti Ghelani</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Email</label>
+                </div>
+                <div class="col-md-6">
+                  <p>kshitighelani@gmail.com</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Phone</label>
+                </div>
+                <div class="col-md-6">
+                  <p>123 456 7890</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Date Of Birth</label>
+                </div>
+                <div class="col-md-6">
+                  <p>12/12/1995</p>
+                </div>
+              </div>
+            </div>
             <div class="row">
-              <div class="col-md-4">
-                <div class="profile-img">
+              <div class="col-md-6">
+                <label>Current City</label>
+              </div>
+              <div class="col-md-6">
+                <p>Dhangadhi</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <label class="text-primary">High School</label>
+              </div>
+              <div class="col-md-6">
+                <p class="text-info">2012(76%)</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label class="text-primary">Senior Secondary School</label>
+              </div>
+              <div class="col-md-6">
+                <p class="text-info">2014(76%)</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label class="text-primary">College</label>
+              </div>
+              <div class="col-md-6">
+                <p class="text-info">B.Sc.CSIT(2012-2016)<small class="text-info">running</small></p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <h2>Open Resume</h2>
+          <!-- Button to Open the Modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Resume
+          </button>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Kshiti's Resume</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
                     alt="" />
-                  <div class="file btn btn-lg btn-primary">
-                    Change Photo
-                    <input type="file" name="file" />
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="profile-head">
-                  <h5>
-                    Kshiti Ghelani
-                  </h5>
-                  <h6>
-                    Web Developer and Designer
-                  </h6>
-                </br>
-                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link btn-primary" style="margin-right: 5px" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                        aria-selected="false">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link btn-primary" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                        aria-selected="false">Educational Details</a>
-                    </li>
-                  </ul>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
-              </div>
-              <div class="col-md-2">
-                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
+
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="profile-work">
-                  <p class="text-info">WORK LINK</p>
-                  <a href="https://github.com/ujjalacharya/girls-in-tech">girls-in-tech</a><br />
-                  <a href="https://chatwithaanand.herokuapp.com/">Chat App</a><br />
-                  <a href="https://game-shop.netlify.com/">Games Shop</a>
-                  <p class="text-info">SKILLS</p>
-                  <a >Web Designer</a><br />
-                  <a >Web Developer</a><br />
-                  <a >WordPress</a><br />
-                  <a >WooCommerce</a><br />
-                  <a >PHP, .Net,Nodejs</a><br />
-                  <p class="text-info">INTEREST</p>
-                  <a>Data Science</a><br />
-                  <a>Web Developer</a><br />
-                  <a>Music</a><br />
-                  <a>Art</a><br />
-                  <a>Mobile App Developement</a><br />
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="tab-content profile-tab" id="myTabContent">
-                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label>User Id</label>
-                      </div>
-                      <div class="col-md-6">
-                        <p>Kshiti123</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label>Name</label>
-                      </div>
-                      <div class="col-md-6">
-                        <p>Kshiti Ghelani</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label>Email</label>
-                      </div>
-                      <div class="col-md-6">
-                        <p>kshitighelani@gmail.com</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label>Phone</label>
-                      </div>
-                      <div class="col-md-6">
-                        <p>123 456 7890</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label>Date Of Birth</label>
-                      </div>
-                      <div class="col-md-6">
-                        <p>12/12/1995</p>
-                      </div>
-                    </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label>Current City</label>
-                      </div>
-                      <div class="col-md-6">
-                        <p>Dhangadhi</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="text-primary">High School</label>
-                      </div>
-                      <div class="col-md-6">
-                        <p class="text-info">2012(76%)</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="text-primary">Senior Secondary School</label>
-                      </div>
-                      <div class="col-md-6">
-                        <p class="text-info">2014(76%)</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="text-primary">College</label>
-                      </div>
-                      <div class="col-md-6">
-                        <p class="text-info">B.Sc.CSIT(2012-2016)<small class="text-info">running</small></p>
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
-                  <h2>Open Resume</h2>
-                  <!-- Button to Open the Modal -->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                    Resume
-                  </button>
-                  
-                  <!-- The Modal -->
-                  <div class="modal" id="myModal">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                  
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                          <h4 class="modal-title">Kshiti's Resume</h4>
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                  
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
-                            alt="" />
-                        </div>
-                  
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        </div>
-                  
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
-                </div>
-                
-              </div>
-            </div>
-          </form>
+          </div>
+          <!--  -->
         </div>
+
       </div>
+  </div>
+  </form>
+</div>
+</div>
 <% include partials/footer%>
