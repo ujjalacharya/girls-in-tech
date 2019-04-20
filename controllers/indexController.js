@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 const { key } = require("../config/key");
 const mockData = require('./mock/mockdata');
+const eventData = require("./mock/eventMockData");
 
 exports.getIndex = (req, res) => {
     res.render('index');
@@ -24,7 +25,7 @@ exports.postHelpline = (req, res) => {
         });
         let mailOptions = {
             from: `${req.body.name} ${req.body.email}`,
-            to: "aanandbhandari@outlook.com",
+            to: "acharyaujjal1@gmail.com",
             subject: `${req.body.subject}`,
             html: `<p>Message :</p></br>
                     <p>${req.body.message}</P>`
@@ -38,7 +39,7 @@ exports.postHelpline = (req, res) => {
 
 }
 exports.getEvents = (req, res) => {
-    res.render('events', { title: 'events' });
+    res.render('events', { title: 'events',  eventData});
 }
 exports.getBlogs = (req, res) => {
     res.render('blogs', { title: 'blogs' });
