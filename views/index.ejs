@@ -1,43 +1,73 @@
 <% include partials/header%>
-        <div class="hero">
-          <img src="/images/hero.png">
-          <h4 class="quote">Purpose is what creates true happiness</h4>
-          <div class="sigin-button">
-            <button class="btn btn-warning buttons"><a href="/users/signin">Signin</a></button>
-          </div>
-          <div class="signup-button">
-            <button class="btn btn-warning buttons"><a href="/users/signup">Signup</a></button>
-          </div>
+<div class="home-container">
+
+  <div class="hero margin-header">
+    <div class="overlay">
+      <h4 class="quote">Purpose is what creates true happiness</h4>
+      <div class="buttons-container">
+        <div class="sigin-button">
+          <button class=" buttons"><a href="/users/signin">Signin</a></button>
         </div>
-
-        <div class="program">
-
-          <h2>We Provide</h2>
+        <div class="signup-button">
+          <button class=" buttons"><a href="/users/signup">Signup</a></button>
         </div>
-
-        <div class="mentorship">
-          <div class="container">
-            <h4 class="pt-3">Mentorship</h4>
-
-            <div class="cover">
-              <img src="/images/mentorship.png" alt="">
-              <p>The Girls in Tech Mentorship Program is offered for university and professional women in partnership with LEAD. The goal of the program is to identify and solve the obstacles keeping mentees from achieving their professional goals. </p>
-              <button class="btn btn-primary">Read More...</button>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
 
 
-        <div class="bootcamp">
-          <div class="container">
-            <h4 class="pt-3">Bootcamps</h4>
+  </div>
 
-            <div class="cover">
-              <img src="/images/bootcamp.jpg" alt="">
-              <p>Girls in Tech Bootcamps range from beginner to intermediate-level, hands-on 2-5 day workshops teaching coding, design, and leadership skills for entrepreneurs and those in the startup space. </p>
-              <button class="btn btn-primary">Read More...</button>
-            </div>
-          </div>
-        </div>
+  <div class="program">
+
+    <h2>We Provide</h2>
+  </div>
+
+  <div class="card">
+    <div class="image">
+      <img src="/images/mentorship.png" alt="card-image">
+    </div>
+    <div class="content-container">
+      <div class="header">
+        Mentorship
+      </div>
+      <div class="content">
+        <p>The Girls in Tech Mentorship Program is offered for university and professional women in partnership with
+          LEAD.
+          The goal of the program is to identify and solve the obstacles keeping mentees from achieving their
+          professional
+          goals. </p>
+      </div>
+      <div class="btn-container">
+        <button class="button interested">
+          Read more...
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="image">
+      <img src="/images/bootcamp.jpg" alt="card-image">
+    </div>
+    <div class="content-container">
+      <div class="header">
+        Bootcamps
+      </div>
+      <div class="content">
+        <p>Girls in Tech Bootcamps range from beginner to intermediate-level, hands-on 2-5 day workshops teaching
+          coding,
+          design, and leadership skills for entrepreneurs and those in the startup space. </p>
+      </div>
+      <div class="btn-container">
+        <button class="button interested">
+          Read more...
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
 
 <% include partials/footer%>
