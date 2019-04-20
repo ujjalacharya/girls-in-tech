@@ -13,6 +13,7 @@ router.get('/blogs', indexController.getBlogs);
 router.post('/helpline', indexController.postHelpline);
 router.get('/about', indexController.getAbout);
 router.get('/roadmap', indexController.getRoadmap);
+router.get('/course', indexController.getCourse);
 
 router.post('/handleSearch', indexController.handleSearch);
 

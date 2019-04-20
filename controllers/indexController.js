@@ -51,10 +51,15 @@ exports.getAbout = (req, res) => {
 exports.getRoadmap = (req, res) => {
     res.render('roadmap', { title: 'roadmap' });
 }
+
 exports.handleSearch = (req, res) => {
     let { searchTerm } = req.body;
     let d = mockData.filter(data => {
         return (data.heading.toLowerCase().includes(searchTerm.toLowerCase()));
     })
     res.render('dashboard', { title: 'dashboard', mockData: d });
+}
+
+exports.getCourse = (req, res) => {
+ res.render('course', {title: 'course'});
 }
