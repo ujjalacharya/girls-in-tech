@@ -30,4 +30,18 @@ const mockData = [{
         accusamus.`},
 ];
 
-module.exports = mockData;
+const courseData = [{
+      url: 'https://www.youtube.com/watch?v=SEMTj8w04Z8&list=PLillGF-RfqbZrjw48EXLdM4dsOhURCLZx',
+      title: 'GraphQL With React & Apollo'
+},{
+            url: 'https://www.youtube.com/watch?v=hdI2bqOjy3c&list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX',
+            title:'Vanilla JavaScript'
+},{
+            url:'https://www.coursera.org/learn/machine-learning',
+            title:'Machine Learning'
+},{
+            url:'https://www.youtube.com/watch?v=_P7wHN_kOv4&list=PLhQjrBD2T382gdfveyad09Ierl_3Jh_wR',
+            title:'React Native'
+}]
+
+module.exports = { mockData, courseData};
