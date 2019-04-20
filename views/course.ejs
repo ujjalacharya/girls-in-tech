@@ -1,27 +1,11 @@
 <% include partials/header%>
 <div class="container-fluid">
-    <div class="card mb-3 bg-secondary" style="max-width: 18rem;"><h4 class="text-white text-center">We Share The Best Resources Around The Globe :)</h4></div>
-    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+    <div class=" card mb-3 bg-secondary btn-info" style="max-width: 28rem; margin-top: 5rem"><h4 class="text-white text-center" style="margin-top:8px">KNOWLEDGE IS FREE</h4></div>
+    <% for(i=0;i<courseData.length;i++){%>
+    <div class="card text-white bg-secondary mb-3" style="max-width: 28rem;">
         <img class="card-img-top" src="/images/hero.png" alt="Card image cap">
-        <div class="card-header text-center"><a href="https://www.youtube.com/watch?v=SEMTj8w04Z8&list=PLillGF-RfqbZrjw48EXLdM4dsOhURCLZx" class="card-link text-info" target="_">GraphQL With React & Apollo</a></div>
+        <div class="card-header text-center"><a href=<%= courseData[i].url %> class="card-link text-info" target="_"><%= courseData[i].title %></a></div>
     </div>
-    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-        <img class="card-img-top" src="/images/hero.png" alt="Card image cap">
-        <div class="card-header text-center"><a
-                href="https://www.youtube.com/watch?v=hdI2bqOjy3c&list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX"
-                class="card-link text-info" target="_">Vanilla JavaScript</a></div>
-    </div>
-    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-        <img class="card-img-top" src="/images/hero.png" alt="Card image cap">
-        <div class="card-header text-center"><a
-                href="https://www.coursera.org/learn/machine-learning"
-                class="card-link text-info" target="_">Machine Learning</a></div>
-    </div>
-    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-        <img class="card-img-top" src="/images/hero.png" alt="Card image cap">
-        <div class="card-header text-center"><a
-                href="https://www.youtube.com/watch?v=_P7wHN_kOv4&list=PLhQjrBD2T382gdfveyad09Ierl_3Jh_wR"
-                class="card-link text-info" target="_">React Native</a></div>
-    </div>
+    <%}%>
 </div>
 <% include partials/footer%>

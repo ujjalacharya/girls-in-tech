@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 const { key } = require("../config/key");
-const mockData = require('./mock/mockdata');
+
+const { mockData, courseData} = require('./mock/mockdata');
 const eventData = require("./mock/eventMockData");
 
 exports.getIndex = (req, res) => {
@@ -62,5 +63,5 @@ exports.handleSearch = (req, res) => {
 }
 
 exports.getCourse = (req, res) => {
- res.render('course', {title: 'course'});
+ res.render('course', {courseData});
 }
