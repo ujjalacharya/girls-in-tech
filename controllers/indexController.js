@@ -1,4 +1,7 @@
 const nodemailer = require("nodemailer");
+const {key} = require("../config/key");
+
+
 exports.getIndex = (req, res) => {
  res.render('index');
 }
@@ -16,7 +19,7 @@ exports.postHelpline = (req,res) => {
             service: 'gmail',
             auth: {
                 user: "aanandbhandari143@gmail.com",
-                pass: "Malaithaxaina123"
+                pass: key
             }
         });
         let mailOptions = {
