@@ -1,11 +1,10 @@
 const nodemailer = require("nodemailer");
 const { key } = require("../config/key");
-
-const { mockData, courseData} = require('./mock/mockdata');
-const eventData = require("./mock/eventMockData");
+const {mockData,courseData} = require('./mock/mockdata');
+const eventData = require('./mock/eventMockData');
 
 exports.getIndex = (req, res) => {
-    res.render('index');
+    res.render('index', { title: 'home' });
 }
 exports.getDashboard = (req, res) => {
     res.render('dashboard', { title: 'dashboard', mockData });
@@ -26,7 +25,7 @@ exports.postHelpline = (req, res) => {
         });
         let mailOptions = {
             from: `${req.body.name} ${req.body.email}`,
-            to: "acharyaujjal1@gmail.com",
+            to: "aanandbhandari@outlook.com",
             subject: `${req.body.subject}`,
             html: `<p>Message :</p></br>
                     <p>${req.body.message}</P>`
@@ -40,7 +39,7 @@ exports.postHelpline = (req, res) => {
 
 }
 exports.getEvents = (req, res) => {
-    res.render('events', { title: 'events',  eventData});
+    res.render('events', { title: 'events',eventData});
 }
 exports.getBlogs = (req, res) => {
     res.render('blogs', { title: 'blogs' });
@@ -63,5 +62,5 @@ exports.handleSearch = (req, res) => {
 }
 
 exports.getCourse = (req, res) => {
- res.render('course', {courseData});
+    res.render('course', { title: 'course',courseData });
 }
