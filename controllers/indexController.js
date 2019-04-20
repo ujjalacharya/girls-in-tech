@@ -51,3 +51,7 @@ exports.getAbout = (req, res) => {
 exports.getRoadmap = (req, res) => {
  res.render('roadmap', {title: 'roadmap'});
 }
+
+exports.getCourse = (req, res) => {
+ res.render('course', {title: 'course'});
+}
