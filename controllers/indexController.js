@@ -1,18 +1,18 @@
 const nodemailer = require("nodemailer");
-const {key} = require("../config/key");
-
+const { key } = require("../config/key");
+const mockData = require('./mock/mockdata');
 
 exports.getIndex = (req, res) => {
- res.render('index');
+    res.render('index');
 }
 exports.getDashboard = (req, res) => {
- res.render('dashboard', {title: 'dashboard'});
+    res.render('dashboard', { title: 'dashboard', mockData });
 }
 exports.getHelpline = (req, res) => {
-    
- res.render('helpline', {title: 'helpline'});
+
+    res.render('helpline', { title: 'helpline' });
 }
-exports.postHelpline = (req,res) => {
+exports.postHelpline = (req, res) => {
     console.log(req.body)
     async function main() {
         let transporter = nodemailer.createTransport({
@@ -38,18 +38,26 @@ exports.postHelpline = (req,res) => {
 
 }
 exports.getEvents = (req, res) => {
- res.render('events', {title: 'events'});
+    res.render('events', { title: 'events' });
 }
 exports.getBlogs = (req, res) => {
- res.render('blogs', {title: 'blogs'});
+    res.render('blogs', { title: 'blogs' });
 }
 
 exports.getAbout = (req, res) => {
- res.render('about', {title: 'about'});
+    res.render('about', { title: 'about' });
 }
 
 exports.getRoadmap = (req, res) => {
- res.render('roadmap', {title: 'roadmap'});
+    res.render('roadmap', { title: 'roadmap' });
+}
+
+exports.handleSearch = (req, res) => {
+    let { searchTerm } = req.body;
+    let d = mockData.filter(data => {
+        return (data.heading.toLowerCase().includes(searchTerm.toLowerCase()));
+    })
+    res.render('dashboard', { title: 'dashboard', mockData: d });
 }
 
 exports.getCourse = (req, res) => {

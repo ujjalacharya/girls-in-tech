@@ -1,5 +1,51 @@
 <% include partials/header%>
-      <div class="container-fluid">
-        <h2>Hello <%= title%></h2>
+<div class="container-fluid dashboard-container">
+  <div class="search-container">
+    <form method="post" class="search-form" action="/handleSearch">
+      <input type="text" placeholder="Search what you want" name="searchTerm" />
+      <div class="search-button-container">
+        <button type="submit">
+          Search
+        </button>
       </div>
+
+    </form>
+  </div>
+  <% for(i=0;i<mockData.length;i++){%>
+  <div class="card">
+    <div class="image">
+      <img src=<%= mockData[i].imageUrl %> alt="card-image">
+    </div>
+    <div class="content-container">
+      <div class="heading">
+        <%= mockData[i].heading %>
+      </div>
+      <div class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit sunt perferendis magnam reiciendis iusto commodi
+        praesentium minus ea quae eligendi eius, omnis id dignissimos laboriosam quidem voluptatibus nihil velit
+        accusamus.
+      </div>
+      <div class="btn-container">
+        <button class="button interested">
+          Interested
+        </button>
+
+        <button class="button going">
+          Going
+        </button>
+      </div>
+    </div>
+  </div>
+  <%}%>
+  
+  <!-- <div class="card">
+
+  </div>
+  <div class="card">
+
+  </div>
+  <div class="card">
+
+  </div> -->
+</div>
 <% include partials/footer%>
